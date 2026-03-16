@@ -1,209 +1,207 @@
-body{
-font-family:'Work Sans',sans-serif;
-text-align:center;
-margin:0;
+/* ========================= */
+/* GLOBAL STYLE */
+/* ========================= */
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  background: #fafafa;
+  text-align: center;
+  color: #333;
 }
 
-/* HERO BACKGROUND FOTO */
-.hero{
-min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-url("img/bg.jpg");
-background-size:cover;
-background-position:center;
-color:white;
+h1, h2, h3 {
+  font-family: 'Sacramento', cursive;
 }
 
+/* ========================= */
+/* COVER UNDANGAN */
+/* ========================= */
+
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../img/bg.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#cover h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+#cover button {
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('../img/bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* ========================= */
 /* SECTION */
-.section{
-padding:80px 20px;
+/* ========================= */
+
+.section {
+  padding: 80px 20px;
+  background: white;
+  margin-bottom: 10px;
 }
 
-/* COVER */
-#cover{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-url("img/bg.jpg");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-
-color:white;
-
-z-index:9999;
+.section h2 {
+  font-size: 45px;
+  color: #c8a96a;
+  margin-bottom: 30px;
 }
 
-.judul-cover{
-font-family:'Sacramento';
-font-size:60px;
-}
-
-/* COUNTDOWN */
-.countdown{
-display:flex;
-justify-content:center;
-gap:10px;
-margin-top:20px;
-flex-wrap:wrap;
-}
-
-.countdown > div{
-background:white;
-color:black;
-padding:15px;
-border-radius:10px;
-min-width:70px;
-font-weight:bold;
-box-shadow:0 5px 10px rgba(0,0,0,0.3);
-}
-
+/* ========================= */
 /* GALERI */
-.slider{
-max-width:500px;
-margin:auto;
-overflow:hidden;
-border-radius:20px;
-}
-
-.slides{
-display:flex;
-transition:1s;
-}
-
-.slides img{
-width:100%;
-flex-shrink:0;
-}
-
-
-/* ========================= */
-/* TAMBAHAN FITUR BARU */
 /* ========================= */
 
-
-/* FOTO PREWEDDING BLUR */
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-backdrop-filter:blur(2px);
-z-index:0;
+.swiper {
+  max-width: 650px;
+  margin: auto;
 }
 
-.hero *{
-position:relative;
-z-index:2;
+.swiper-slide img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* ========================= */
+/* MAP */
+/* ========================= */
 
-/* GALERI SWIPER */
-.swiper{
-max-width:500px;
-margin:auto;
-border-radius:20px;
-overflow:hidden;
+iframe {
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.swiper-slide img{
-width:100%;
-display:block;
-border-radius:20px;
+/* ========================= */
+/* FORM UCAPAN */
+/* ========================= */
+
+input,
+textarea {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
-
-/* AMPLOP ANIMASI */
-#amplop{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:#111;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:10000;
+#daftarUcapan {
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
-.envelope{
-position:relative;
-width:300px;
-height:200px;
-background:#e63946;
-border-radius:10px;
-cursor:pointer;
-transition:1s;
+.ucapan-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.flap{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#d62828;
-clip-path:polygon(0 0,100% 0,50% 60%);
-transform-origin:top;
-transition:1s;
+/* ========================= */
+/* AMPLOP DIGITAL */
+/* ========================= */
+
+.rekening-box {
+  background: #f2f2f2;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 300px;
+  margin: auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.letter{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-color:white;
-text-align:center;
-padding:20px;
+.rekening-box p {
+  margin: 5px 0;
+  font-size: 18px;
 }
 
-.envelope.open .flap{
-transform:rotateX(180deg);
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.btn {
+  border-radius: 30px !important;
+  padding: 10px 25px !important;
+  transition: 0.3s;
 }
 
-
-/* GALERI FOTO */
-.section img{
-max-width:100%;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
+.btn:hover {
+  transform: scale(1.05);
 }
 
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
+footer {
+  background: #111;
+  color: white;
+  padding: 40px;
+  font-size: 14px;
+}
+
+/* ========================= */
 /* RESPONSIVE */
-@media(max-width:768px){
+/* ========================= */
 
-.judul-cover{
-font-size:45px;
-}
+@media (max-width:768px) {
 
-.section{
-padding:60px 15px;
-}
+  .hero h1 {
+    font-size: 45px;
+  }
 
-.countdown > div{
-padding:10px;
-min-width:60px;
-}
+  .section h2 {
+    font-size: 35px;
+  }
 
-.envelope{
-width:250px;
-height:170px;
-}
+  #cover h1 {
+    font-size: 45px;
+  }
 
 }
